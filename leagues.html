@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Super League - Standings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .league-table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .league-table th, .league-table td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .league-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .league-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .logo {
+            max-width: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.2);
+        }
+
+        .team-link {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .team-link:hover {
+            color: #4CAF50;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        nav ul li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .league-table {
+                width: 100%;
+                margin: 0;
+            }
+
+            .team-link {
+                font-size: 14px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin-left: 10px;
+            }
+
+            nav ul li a {
+                padding: 8px 12px; /* Reduce padding in nav items */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .league-table th, .league-table td {
+                padding: 5px;
+                font-size: 12px;
+            }
+
+            .team-link {
+                font-size: 12px;
+            }
+
+            .logo {
+                max-width: 30px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin-left: 5px;
+            }
+
+            nav ul li a {
+                padding: 6px 8px; /* Further reduce padding in nav items */
+                font-size: 14px; /* Adjust font size in nav items */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="khelcha_nepal.png" alt="Khelcha Nepal Logo" class="logo">
+            <nav>
+                <ul class="tabs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leagues.html" class="active">Leagues</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1 style="text-align: center;">Nepal Super League</h1>
+    <table class="league-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>MP</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>GD</th>
+                <th>Pts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="kathmandu_rayzrs.html" target="_blank" class="team-link"><img src="club_logo_kathmandu.png" alt="Kathmandu Rayzrs Logo" class="logo"> Kathmandu Rayzrs</a></td>
+                <td>20</td>
+                <td>15</td>
+                <td>3</td>
+                <td>2</td>
+                <td>45</td>
+                <td>48</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="lalitpur_city.html" target="_blank" class="team-link"><img src="club_logo_lalitpur.png" alt="Lalitpur City Logo" class="logo"> Lalitpur City</a></td>
+                <td>20</td>
+                <td>12</td>
+                <td>5</td>
+                <td>3</td>
+                <td>40</td>
+                <td>41</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="jhapa_fc.html" target="_blank" class="team-link"><img src="club_logo_jhapa.png" alt="Jhapa FC Logo" class="logo"> Jhapa FC</a></td>
+                <td>20</td>
+                <td>11</td>
+                <td>6</td>
+                <td>3</td>
+                <td>38</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="sporting_ilam.html" target="_blank" class="team-link"><img src="club_logo_ilam.png" alt="Sporting Ilam Logo" class="logo"> Sporting Ilam</a></td>
+                <td>20</td>
+                <td>10</td>
+                <td>7</td>
+                <td>3</td>
+                <td>35</td>
+                <td>37</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="birgunj_united.html" target="_blank" class="team-link"><img src="club_logo_birgunj.png" alt="Birgunj United Logo" class="logo"> Birgunj United</a></td>
+                <td>20</td>
+                <td>9</td>
+                <td>8</td>
+                <td>3</td>
+                <td>30</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="pokhara_thunders.html" target="_blank" class="team-link"><img src="club_logo_pokhara.png" alt="Pokhara Thunders Logo" class="logo"> Pokhara Thunders</a></td>
+                <td>20</td>
+                <td>8</td>
+                <td>9</td>
+                <td>3</td>
+                <td>28</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="butwal_lumbini.html" target="_blank" class="team-link"><img src="club_logo_butwal.png" alt="Butwal Lumbini Logo" class="logo"> Butwal Lumbini</a></td>
+                <td>20</td>
+                <td>7</td>
+                <td>7</td>
+                <td>6</td>
+                <td>25</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="dhangadhi.html" target="_blank" class="team-link"><img src="club_logo_dhangadhi.png" alt="Dhangadhi Logo" class="logo"> Dhangadhi</a></td>
+                <td>20</td>
+                <td>6</td>
+                <td>9</td>
+                <td>5</td>
+                <td>22</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="fc_chitwan.html" target="_blank" class="team-link"><img src="club_logo_chitwan.png" alt="Chitwan Logo" class="logo"> FC Chitwan</a></td>
+                <td>20</td>
+                <td>5</td>
+                <td>8</td>
+                <td>7</td>
+                <td>20</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="biratnagar_city.html" target="_blank" class="team-link"><img src="club_logo_biratnagar.png" alt="Biratnagar City Logo" class="logo"> Biratnagar City</a></td>
+                <td>20</td>
+                <td>5</td>
+                <td>8</td>
+                <td>7</td>
+                <td>20</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

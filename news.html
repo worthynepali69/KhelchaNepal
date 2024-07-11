@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khelcha Nepal - News</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #4CAF50; /* Green background on hover */
+            color: #fff; /* White text on hover */
+        }
+
+        .logo {
+            max-width: 100px; /* Adjust the size as needed */
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .news-container {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center; /* Center the grid items */
+        }
+
+        .news-item {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease; /* Add smooth navigation effect */
+        }
+
+        .news-item:hover {
+            transform: translateY(-10px); /* Smooth navigation effect */
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 150px; /* Adjust the height as needed */
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .news-item .content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-item h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .news-item p {
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .news-item a {
+            align-self: flex-start;
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+
+            .news-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .news-item img {
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .news-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 10px;
+            }
+
+            .news-item img {
+                height: 100px;
+            }
+
+            nav ul li a {
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include the common navbar -->
+    <header>
+        <div class="container">
+            <img src="khelcha_nepal.png" alt="Khelcha Nepal Logo" class="logo">
+            <nav>
+                <ul class="tabs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leagues.html">Leagues</a></li>
+                    <li><a href="news.html" class="active">News</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- News section -->
+        <div class="news-container">
+            <!-- News item 1 -->
+            <div class="news-item">
+                <img src="cbu vs paro.jpg" alt="Church Boys vs Paro FC">
+                <div class="content">
+                    <h2>Church Boys vs Paro FC</h2>
+                    <p>Church Boys United to Face Paro FC in AFC Challenge League Qualifier. The 2023 Nepal A Division League champions...</p>
+                    <a href="news_article1.html">Read More</a>
+                </div>
+            </div>
+
+            <!-- News item 2 -->
+            <div class="news-item">
+                <img src="nepali football 2023.jpg" alt="Nepali Football">
+                <div class="content">
+                    <h2>Why Nepal can't score goals?</h2>
+                    <p>The Nepali men's national football team, despite its passionate fanbase and dedicated players, has struggled to find the net...</p>
+                    <a href="news_article2.html">Read More</a>
+                </div>
+            </div>
+
+            <!-- News item 3 -->
+            <div class="news-item">
+                <img src="news_image3.jpg" alt="News Image 3">
+                <div class="content">
+                    <h2>Nepal National Cricket Team's Recent Victory</h2>
+                    <p>Nepal's national cricket team secured a thrilling victory against a strong opponent in the latest international match...</p>
+                    <a href="news_article3.html">Read More</a>
+                </div>
+            </div>
+
+            <!-- News item 4 -->
+            <div class="news-item">
+                <img src="news_image4.jpg" alt="News Image 4">
+                <div class="content">
+                    <h2>Football Infrastructure Development in Nepal</h2>
+                    <p>Efforts to improve football infrastructure in Nepal are underway, with new training facilities and stadiums being built...</p>
+                    <a href="news_article4.html">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

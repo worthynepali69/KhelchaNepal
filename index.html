@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khelcha Nepal - Home</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 100px;
+            vertical-align: middle;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        nav {
+            text-align: right;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        /* Hero section */
+        .hero {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Widgets section */
+        .widgets {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .widget {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+            width: 100%; /* Full width on small screens */
+            max-width: calc(50% - 20px); /* Adjust width for larger screens */
+        }
+
+        .widget:hover {
+            transform: translateY(-10px);
+        }
+
+        .widget h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .widget p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .widget a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .widget a:hover {
+            background-color: #555;
+        }
+
+        /* League table styles */
+        .league-table-container {
+            width: 100%; /* Full width */
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+        }
+
+        .league-table {
+            width: 100%; /* Full width */
+            table-layout: fixed; /* Fixed layout to prevent auto-width behavior */
+            border-collapse: collapse;
+        }
+
+        .league-table th, .league-table td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+
+        .league-table th {
+            background-color: #4CAF50; /* Background color for header row */
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .league-table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Alternate row background color */
+        }
+
+        .logo {
+            max-width: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.2);
+        }
+
+        .team-link {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .team-link:hover {
+            color: #4CAF50;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 1200px) {
+            .container {
+                padding: 10px;
+            }
+
+            .widget {
+                max-width: calc(50% - 20px); /* Two widgets per row on medium screens */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .widget {
+                max-width: 100%; /* Full width on small screens */
+            }
+
+            .widgets {
+                flex-direction: column; /* Stack widgets vertically on small screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav ul li {
+                margin-left: 10px; /* Adjust margin for smaller screens */
+            }
+
+            .widget {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+
+            .logo {
+                max-width: 40px; /* Reduce logo size for smaller screens */
+            }
+
+            .hero h1 {
+                font-size: 2.5rem; /* Adjust hero heading size for smaller screens */
+            }
+
+            .hero p {
+                font-size: 1rem; /* Adjust hero paragraph size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include the common navbar -->
+    <header>
+        <div class="container">
+            <img src="khelcha_nepal.png" alt="Khelcha Nepal Logo" class="logo">
+            <nav>
+                <ul class="tabs">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="leagues.html">Leagues</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Khelcha Nepal</h1>
+            <p>Your ultimate source for Nepalese sports news and updates.</p>
+        </div>
+    </section>
+
+    <!-- Widgets section -->
+    <div class="container">
+        <div class="widgets">
+            <!-- Widget 1: League Table -->
+            <div class="widget">
+                <h2>Nepal Super League Standings</h2>
+                <div class="league-table-container">
+                    <table class="league-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team</th>
+                                <th>MP</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>GD</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="kathmandu_rayzrs.html" class="team-link"><img src="club_logo_kathmandu.png" alt="Kathmandu Rayzrs Logo" class="logo"> Kathmandu Rayzrs</a></td>
+                                <td>20</td>
+                                <td>15</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>45</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="lalitpur_city.html" class="team-link"><img src="club_logo_lalitpur.png" alt="Lalitpur City Logo" class="logo"> Lalitpur City</a></td>
+                                <td>20</td>
+                                <td>12</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>40</td>
+                                <td>41</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="jhapa_fc.html" class="team-link"><img src="club_logo_jhapa.png" alt="Jhapa FC Logo" class="logo"> Jhapa FC</a></td>
+                                <td>20</td>
+                                <td>11</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>38</td>
+                                <td>39</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="sporting_ilam.html" class="team-link"><img src="club_logo_ilam.png" alt="Sporting Ilam Logo" class="logo"> Sporting Ilam</a></td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>20</td>
+                                <td>34</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="leagues.html" class="button">Full Table</a>
+            </div>
+
+            <!-- Widget 2: Latest News -->
+            <div class="widget">
+                <h2>Latest News</h2>
+                <p>Stay updated with the latest news on Nepalese football and cricket.</p>
+                <a href="news.html" class="button">Read More</a>
+            </div>
+
+            <!-- Widget 3: Sports Gallery -->
+            <div class="widget">
+                <h2>Sports Gallery</h2>
+                <p>Explore our gallery featuring football, cricket, volleyball, and more.</p>
+                <a href="gallery.html" class="button">View Gallery</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Khelcha Nepal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
